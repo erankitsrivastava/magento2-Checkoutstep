@@ -1,0 +1,49 @@
+<li id="extra_step" data-bind="fadeVisible: isVisible">
+<div class="step-title" data-bind="i18n: 'Profile Management'" data-role="title"></div>
+    <div id="checkout-step-title"
+         class="step-content"
+         data-role="content">
+
+        <form data-bind="submit: navigateToNextStep" novalidate="novalidate">
+            <div class="field _required" name="extra_step.firstname">
+                <label class="label" for="extra_step_firstname">
+                    <span data-bind="i18n: 'First Name'"></span>
+                </label>
+
+                <div class="control">
+                   <input class="input-text" type="text" data-bind=" 
+                        valueUpdate: 'keyup', 
+                        attr: {
+                            name: 'firstname',
+                            placeholder: 'First Name', 
+                            'aria-required': required, 
+                            id: 'extra_step_firstname'
+                        }">
+                </div>
+            </div>
+            <div class="field _required" name="extra_step.lastname">
+                <label class="label" for="extra_step_lastname">
+                    <span data-bind="i18n: 'Last Name'"></span>
+                </label>
+
+                <div class="control">
+                   <input class="input-text" type="text" data-bind=" 
+                        valueUpdate: 'keyup', 
+                        attr: {
+                            name: 'lastname',
+                            placeholder: 'First Name', 
+                            'aria-required': required, 
+                            id: 'extra_step_lastname'
+                        }">
+                </div>
+            </div>
+            <div class="actions-toolbar">
+                <div class="primary">
+                    <button data-role="opc-continue" type="submit" class="button action continue primary">
+                        <span><!-- ko i18n: 'Next'--><!-- /ko --></span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</li>
